@@ -1,6 +1,19 @@
 ESX = nil
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
+local can = true
+local function notif(bool)
+    if can then
+        if bool then
+            can = false
+            TriggerClientEvent('esx:showNotification', source, '(~y~Information~s~)\nL\'appel à été passer avec succès.')
+        else
+            can = false
+            TriggerClientEvent('esx:showNotification', source, '(~y~Information~s~)\nL\'appel à été passer avec succès.')
+        end
+    end
+end
+
 RegisterNetEvent("xCall:entreprise")
 AddEventHandler("xCall:entreprise", function(job)
     local source = source
@@ -12,7 +25,9 @@ AddEventHandler("xCall:entreprise", function(job)
         local xPlayer = ESX.GetPlayerFromId(xPlayers[i])
         if (xPlayer.getJob().name) == job then
             TriggerClientEvent('esx:showNotification', xPlayers[i], '(~y~Information~s~)\nUn client recherche un employé à l\'accueil.')
-            TriggerClientEvent('esx:showNotification', source, '(~y~Information~s~)\nL\'appel à été passer avec succès.')
+            notif(true)
+        else
+            notif(true)
         end
     end
 end)
