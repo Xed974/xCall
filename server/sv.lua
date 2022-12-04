@@ -9,7 +9,7 @@ local function notif(bool)
             TriggerClientEvent('esx:showNotification', source, '(~y~Information~s~)\nL\'appel à été passer avec succès.')
         else
             can = false
-            TriggerClientEvent('esx:showNotification', source, '(~y~Information~s~)\nL\'appel à été passer avec succès.')
+            TriggerClientEvent('esx:showNotification', source, '(~y~Information~s~)\nAucun employé disponible.')
         end
     end
 end
