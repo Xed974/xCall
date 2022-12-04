@@ -27,7 +27,7 @@ AddEventHandler("xCall:entreprise", function(job)
             TriggerClientEvent('esx:showNotification', xPlayers[i], '(~y~Information~s~)\nUn client recherche un employé à l\'accueil.')
             notif(true)
         else
-            notif(true)
+            notif(false)
         end
     end
 end)
