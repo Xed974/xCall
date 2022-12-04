@@ -16,6 +16,8 @@ local function notif(bool, xPlayers)
             Wait(60000)
             can = true
         end
+    else
+        TriggerClientEvent('esx:showNotification', source, '(~y~Information~s~)\nVous avez dejà envoyé un appel.')
     end
 end
 
