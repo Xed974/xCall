@@ -13,9 +13,6 @@ AddEventHandler("xCall:entreprise", function(job)
         if (xPlayer.getJob().name) == job then
             TriggerClientEvent('esx:showNotification', xPlayers[i], '(~y~Information~s~)\nUn client recherche un employé à l\'accueil.')
             TriggerClientEvent('esx:showNotification', source, '(~y~Information~s~)\nL\'appel à été passer avec succès.')
-        else
-            TriggerClientEvent('esx:showNotification', source, '(~y~Information~s~)\nAucun employé n\'est disponible.')
-                return
         end
     end
 end)
