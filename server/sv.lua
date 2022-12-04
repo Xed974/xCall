@@ -15,6 +15,7 @@ AddEventHandler("xCall:entreprise", function(job)
             TriggerClientEvent('esx:showNotification', source, '(~y~Information~s~)\nL\'appel à été passer avec succès.')
         else
             TriggerClientEvent('esx:showNotification', source, '(~y~Information~s~)\nAucun employé n\'est disponible.')
+                return
         end
     end
 end)
